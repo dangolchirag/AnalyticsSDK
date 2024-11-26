@@ -44,15 +44,15 @@ class App : Application() {
 }
 
 // Start a Session
-val sessionId = AnalyticsSDK.getInstance().startSession()  
+val sessionId = AnalyticsSDK.startSession()  
 println("Session started with ID: $sessionId")  
 
 // Log Events
-AnalyticsSDK.getInstance().trackEvent("Test Event", mapOf("key" to "value"))  
+AnalyticsSDK.trackEvent("Test Event", mapOf("key" to "value"))  
 
 
 // Stop a Session
-val sessionId = AnalyticsSDK.getInstance().stopSession("sessionId")  
+val sessionId = AnalyticsSDK.stopSession("sessionId")  
 if (sessionId != null) println("Session $sessionId stopped.")  
 else println("No active session found.")  
 
